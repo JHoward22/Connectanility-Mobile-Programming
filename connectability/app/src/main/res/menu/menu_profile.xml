@@ -1,13 +1,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">  <!-- Added app namespace -->
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
         android:id="@+id/action_settings"
         android:title="@string/settings"
         android:icon="@drawable/menu"
-        app:showAsAction="ifRoom|withText"/>  <!-- Use app:showAsAction instead of android:showAsAction -->
+        app:showAsAction="ifRoom|withText"/>
 </menu>
-
 
 
 
