@@ -6,42 +6,30 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/connectability"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+    android:roundIcon="@mipmap/ic_launcher_round"
+    android:supportsRtl="true"
+    android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
-        <!-- Main Activity (Sign-In Screen) -->
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+    <!-- Main Activity (Starting Activity) -->
+    <activity
+        android:name=".MainActivity"
+        android:exported="true">  <!-- Ensure exported=true for the starting activity -->
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN"/>
+            <category android:name="android.intent.category.LAUNCHER"/>
+        </intent-filter>
+    </activity>
 
-        <!-- Create Account Activity -->
-        <activity
-            android:name=".CreateAccountActivity"
-            android:exported="false" />
+    <!-- Other Activities in the Application -->
+    <activity android:name=".CreateAccountActivity" android:exported="false"/>
+    <activity android:name=".PasswordRecoveryActivity" android:exported="false"/>
+    <activity android:name=".SecurityQuestionsActivity" android:exported="false"/>
+    <activity android:name=".ProfileActivity" android:exported="false"/>
+    <activity android:name=".SettingsActivity" android:exported="false"/>
+</application>
 
-        <!-- Password Recovery Activity -->
-        <activity
-            android:name=".PasswordRecoveryActivity"
-            android:exported="false" />
+    </manifest>
 
-        <!-- Security Questions Activity -->
-        <activity
-            android:name=".SecurityQuestionsActivity"
-            android:exported="false" />
-
-        <!-- Profile Activity -->
-        <activity
-            android:name=".ProfileActivity"
-            android:exported="false" />
-
-        <!-- Settings Activity -->
-        <activity
             android:name=".SettingsActivity"
             android:exported="false" />
     </application>
