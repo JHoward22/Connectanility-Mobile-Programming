@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="ExtraText">
+
+        <!-- Toolbar with Connectability Text -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <TextView
+                android:id="@+id/toolbarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Connectability"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center"
+                android:contentDescription="@string/connectability"
+                tools:ignore="HardcodedText" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <!-- Cover Image -->
+        <ImageView
+            android:id="@+id/coverImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/cape"
+            android:scaleType="centerCrop"
+            android:layout_below="@id/toolbar"
+            android:contentDescription="@string/cover_image_desc" />
+
+        <!-- Profile Image -->
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/cool"
+            android:layout_marginTop="150dp"
+            android:layout_marginStart="16dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/profile_image_desc" />
+
+        <!-- Button for Pictures Page -->
+        <Button
+            android:id="@+id/btn_view_pictures"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/profileImage"
+            android:layout_alignTop="@id/profileImage"
+            android:text="view_pictures"
+            android:padding="8dp"
+            tools:ignore="HardcodedText" />
+
+        <!-- Name TextView -->
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/coverImage"
+            android:textSize="18sp"
+            android:text="@string/Dr.Allen" />
+
+        <!-- Followers and Following Count Layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/textViewName"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/followersCount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/followers_count"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/followingCount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/following_count"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <!-- RecyclerView for Posts -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/postsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="331dp"
+            android:layout_marginBottom="189dp"
+            android:padding="8dp" />
+
+        <!-- Bottom Buttons Grid Layout -->
+        <GridLayout
+            android:id="@+id/bottomButtonsGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:columnCount="3"
+            android:rowCount="1"
+            android:gravity="center"
+            android:padding="16dp">
+
+            <Button
+                android:id="@+id/btn_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/btn_add_friend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="add_friend"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/btn_settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings" />
+        </GridLayout>
+    </RelativeLayout>
+
+    <!-- Navigation View -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/menu_profile" />
+</androidx.drawerlayout.widget.DrawerLayout>

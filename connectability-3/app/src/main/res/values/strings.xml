@@ -1,0 +1,21 @@
+<resources>
+    <string name="profile_image_desc">Profile Image</string>
+    <string name="followers_count">100 Followers</string>
+    <string name="following_count">99 Following</string>
+    <string name="settings">Settings</string>
+    <string name="connectability">Connectability</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="cover_image_desc" />
+    <string name="Dr.Allen">Username</string>
+    <string name="menuesettings">Settings</string>
+    <string name="add_post">Add Post</string>
+    <string name="password">password</string>
+    <string name="sign_in">sign_in</string>
+    <string name="create_account">create_account</string>
+    <string name="forgot_password">forgot_password</string>
+    <string name="logout">logout</string>
+    <string name="email">email</string>
+
+
+</resources>
